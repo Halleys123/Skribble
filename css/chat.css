@@ -1,0 +1,38 @@
+.chat_box {
+  width: 30rem;
+}
+.chats {
+  max-height: 100%;
+  overflow: auto;
+  scroll-snap-type: y;
+  scroll-behavior: smooth;
+  scroll-snap-align: end;
+}
+.chat {
+  font-family: "Calibre", sans-serif;
+  font-size: 1.2rem;
+}
+.input_chat {
+  height: 6rem;
+}
+.input {
+  height: 2.4rem;
+  font-size: 1.6rem;
+}
+
+.send_btn {
+  border: none;
+  background: #1d3557;
+  cursor: pointer;
+  color: white;
+  transition: 0.15s;
+}
+.send_btn:hover {
+  background: #457b9d;
+}
+.chat_user {
+  font-weight: 700;
+}
+.chat_content {
+  overflow-y: auto;
+}

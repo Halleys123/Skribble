@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skribble</title>
+
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/general.css">
+
+    <link rel="stylesheet" href="css/players.css">
+    <link rel="stylesheet" href="css/canvas.css">
+    <link rel="stylesheet" href="css/chat.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="flex gap-3 col">
+    <div class="content self-stretch flex gap-3">
+        <div class="players flex black_border border-radius-1 col content-bg gap-1">
+            <canvas id="svgCanvas" width="500" height="500" style="display:none;"></canvas>
+        </div>
+        <div class="canvas_box flex col gap-3">
+            <div class="score_box flex black_border border-radius-1 content-bg">
+                <strong>
+                    Aranv
+                </strong>
+                <span>
+                    Score: 0
+                </span>
+            </div>
+            <canvas class="black_border border-radius-1 content-bg flex-1"></canvas>
+        </div>
+        <div class="chat_box flex col self-stretch gap-3">
+            <div class="chats black_border p-0-8 gap-2 border-radius-1 content-bg flex flex-1 col">
+                <span class="chat_heading p-y-0-8 flex col self-stretch">
+                    <h2>Chat Box</h2>
+                </span>
+                <div class="divider-horizontal"></div>
+                <div class="chat_content gap-1 flex col self-stretch"></div>
+            </div>
+            <form class="input_chat p-x-0-8 gap-2 black_border border-radius-1 flex content-bg items-center">
+                <input type="text" class="input calibre flex-1 flex border-none outline-none">
+                <button class="send_btn border-radius-2 p-0-8 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" viewBox="0 0 256 256">
+                        <path
+                            d="M231.87,114l-168-95.89A16,16,0,0,0,40.92,37.34L71.55,128,40.92,218.67A16,16,0,0,0,56,240a16.15,16.15,0,0,0,7.93-2.1l167.92-96.05a16,16,0,0,0,.05-27.89ZM56,224a.56.56,0,0,0,0-.12L85.74,136H144a8,8,0,0,0,0-16H85.74L56.06,32.16A.46.46,0,0,0,56,32l168,95.83Z">
+                        </path>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="tools flex self-stretch p-0-8 black_border border-radius-1 content-bg">
+        <!-- color picker -->
+        <div class="colors"></div>
+        <div class="tool_group">
+            <button class="color_picker tool">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+                    <path
+                        d="M224,67.3a35.79,35.79,0,0,0-11.26-25.66c-14-13.28-36.72-12.78-50.62,1.13L142.8,62.2a24,24,0,0,0-33.14.77l-9,9a16,16,0,0,0,0,22.64l2,2.06-51,51a39.75,39.75,0,0,0-10.53,38l-8,18.41A13.65,13.65,0,0,0,36,219.29a15.9,15.9,0,0,0,17.71,3.36L71.24,215a39.9,39.9,0,0,0,37.05-10.75l51-51,2.06,2.06a16,16,0,0,0,22.62,0l9-9a24,24,0,0,0,.74-33.18l19.75-19.87A35.75,35.75,0,0,0,224,67.3ZM97,193a24,24,0,0,1-24,6,8,8,0,0,0-5.55.31l-18.1,7.9L57,189.41a8,8,0,0,0,.25-5.75,24,24,0,0,1,.1-15.69H122Zm41-41H70.07l44-44,33.94,34Zm64.18-70-25.37,25.52a8,8,0,0,0,0,11.31l4.89,4.88a8,8,0,0,1,0,11.32l-9,9L112,83.26l9-9a8,8,0,0,1,11.31,0l4.89,4.89a8,8,0,0,0,5.65,2.34h0a8,8,0,0,0,5.66-2.36l24.94-25.09c7.81-7.82,20.5-8.18,28.29-.81a20,20,0,0,1,.39,28.7Z">
+                    </path>
+                </svg>
+                <input class="hidden" type="color" id="color" value="#000000">
+            </button>
+            <button class="tool" name="Broom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+                    <path
+                        d="M235.5,216.81c-22.56-11-35.5-34.58-35.5-64.8V134.73a15.94,15.94,0,0,0-10.09-14.87L165,110a8,8,0,0,1-4.48-10.34l21.32-53a28,28,0,0,0-16.1-37,28.14,28.14,0,0,0-35.82,16,.61.61,0,0,0,0,.12L108.9,79a8,8,0,0,1-10.37,4.49L73.11,73.14A15.89,15.89,0,0,0,55.74,76.8C34.68,98.45,24,123.75,24,152a111.45,111.45,0,0,0,31.18,77.53A8,8,0,0,0,61,232H232a8,8,0,0,0,3.5-15.19ZM67.14,88l25.41,10.3a24,24,0,0,0,31.23-13.45l21-53c2.56-6.11,9.47-9.27,15.43-7a12,12,0,0,1,6.88,15.92L145.69,93.76a24,24,0,0,0,13.43,31.14L184,134.73V152c0,.33,0,.66,0,1L55.77,101.71A108.84,108.84,0,0,1,67.14,88Zm48,128a87.53,87.53,0,0,1-24.34-42,8,8,0,0,0-15.49,4,105.16,105.16,0,0,0,18.36,38H64.44A95.54,95.54,0,0,1,40,152a85.9,85.9,0,0,1,7.73-36.29l137.8,55.12c3,18,10.56,33.48,21.89,45.16Z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</body>
+<script src="js/script.js" type="module"></script>
+<script src="js/player/player.js" type="module"></script>
+
+</html>

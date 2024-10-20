@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Nosifer", cursive;
+  margin: 0;
+  padding: 0;
+  height: 100dvh;
+  width: 100dvw;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  box-sizing: border-box;
+  background: #f1faee;
+  color: #1d3557;
+}
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1d3557;
+}
+html {
+  font-size: 62.5%;
+  /* Game style font */
+}
+.content {
+  height: 60rem;
+}
+
+.score_box {
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem;
+  min-height: 6rem;
+}
+.score_box * {
+  font-family: "Sans", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}

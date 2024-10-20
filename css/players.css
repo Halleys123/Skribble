@@ -1,0 +1,47 @@
+.players {
+  padding: 1.2rem;
+  box-sizing: border-box;
+  width: 25rem;
+}
+.player {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #89cff0;
+
+  height: 5rem;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  gap: 0.8rem;
+}
+.left {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  gap: 0.8rem;
+}
+.rank {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.player * {
+  color: #112a46;
+  font-family: "Calibre", sans-serif;
+  font-size: 1.3rem;
+}
+.avatar {
+  /* background-color: white; */
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 0.4rem;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}

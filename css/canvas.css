@@ -1,0 +1,52 @@
+.canvas_box {
+  flex: 1;
+}
+.tools {
+  min-height: 8rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.tool_group {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+}
+.tool {
+  box-sizing: border-box;
+  background-color: white;
+  border: none;
+  height: 3.6rem;
+  width: 3.6rem;
+  border-radius: 0.4rem;
+  padding: 0.6rem;
+  outline: 1.5px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tool:hover {
+  background-color: #f1faee;
+  cursor: pointer;
+}
+.colors {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  align-self: stretch;
+  width: fit-content;
+  min-width: 20rem;
+  height: fit-content;
+  column-gap: 0.3rem;
+  row-gap: 0.8rem;
+  justify-items: center;
+  align-items: center;
+  margin-top: 0.4rem;
+}
+.color {
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 50%;
+  outline: 0.5px solid black;
+}
