@@ -1,0 +1,10 @@
+# Skribble
+
+1. There are three branches in this repository: `master`, `primary` and `secondary`.
+
+2. Work done in primary branch:
+   a. It will have primary skirbble project that is planned to be deployed on the server with good graphics and animations.
+   b. It will have a good UI/UX design.
+
+3. Work done in secondary branch:
+   It will be secondary skirbble project that is planned to be made quickly and will only be played offline.
