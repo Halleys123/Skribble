@@ -2,6 +2,7 @@
   padding: 1.2rem;
   box-sizing: border-box;
   width: 25rem;
+  flex-shrink: 0;
 }
 .player {
   box-sizing: border-box;

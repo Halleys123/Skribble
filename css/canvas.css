@@ -27,6 +27,9 @@
   justify-content: center;
   align-items: center;
 }
+.tool.active {
+  background-color: #f1faee;
+}
 .tool:hover {
   background-color: #f1faee;
   cursor: pointer;
