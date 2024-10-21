@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skribble | Homepage</title>
+
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="flex items-center justify-center ">
+    <div class="main border-radius-1">
+        <div class="left">
+            <span class="label">
+                Game Settings
+            </span>
+            <div class="input_box">
+                <label for="time">Drawing Time</label>
+                <input class="input" type="number" max="100" min="25" id="time" placeholder="10, 20, 30..." />
+            </div>
+            <div class="input_box">
+                <label for="rounds">Total Rounds</label>
+                <select class="input" type="text" id="rounds">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+            <div class="input_box">
+                <label for="mode">Game Mode</label>
+                <select class="input" type="text" id="mode">
+                    <option value="Normal">Normal</option>
+                    <option value="Hidden">Hidden</option>
+                    <option value="Combination">Combination</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <button>Start</button>
+                <button>Invite Link</button>
+            </div>
+        </div>
+        <div class="right">
+            <span class="label">
+                Custom Word List
+            </span>
+            <textarea name="list" id="list" class="list" placeholder="Enter words seperated by ',' each"></textarea>
+        </div>
+    </div>
+</body>
+
+</html>

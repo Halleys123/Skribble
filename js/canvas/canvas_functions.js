@@ -6,6 +6,9 @@ import {
 import { canvas, ctx, properties, tools, strokes } from "./shared.js";
 let currentStroke = null;
 
+const pan = document.querySelector(".pan");
+const brush = document.querySelector(".brush");
+
 const aspect_ratio = 4 / 3;
 
 function resizeCanvas() {
@@ -28,6 +31,17 @@ function redraw() {
 
 function mouse_down(e) {
   const point = getTransformedPoint(e.offsetX, e.offsetY);
+  if (e.button == 1) {
+    tools.pan = true;
+    tools.brush = false;
+    pan.classList.add("active");
+    brush.classList.remove("active");
+  } else if (e.button == 0) {
+    tools.pan = false;
+    tools.brush = true;
+    pan.classList.remove("active");
+    brush.classList.add("active");
+  }
   if (tools.brush) {
     currentStroke = {
       points: [point],

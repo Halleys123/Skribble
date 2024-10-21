@@ -14,6 +14,7 @@ const pan = document.querySelector(".pan");
 const brush = document.querySelector(".brush");
 const clear = document.querySelector(".clear");
 const undo = document.querySelector(".undo");
+const color_picker = document.querySelector(".color_picker");
 
 handle_colors();
 
@@ -44,6 +45,12 @@ undo.addEventListener("click", () => {
   strokes.pop();
   redraw();
 });
+color_picker.addEventListener("click", (e) => {
+  color_picker.querySelector("input").click();
+});
+color_picker.querySelector("input").addEventListener("change", (e) => {
+  properties.color = e.currentTarget.value;
+});
 
 brushSizeSlider.addEventListener("input", changeBrushSize);
 
@@ -51,6 +58,7 @@ canvas.addEventListener("mousedown", mouse_down);
 canvas.addEventListener("mouseup", mouse_up);
 canvas.addEventListener("mousemove", mouse_move);
 canvas.addEventListener("wheel", zoom);
+canvas.addEventListener("mouseleave", mouse_up);
 
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();

@@ -1,0 +1,93 @@
+* {
+  font-family: "Work Sans", sans-serif;
+}
+.main {
+  box-sizing: border-box;
+  height: 60rem;
+  aspect-ratio: 16/9;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2.4rem;
+  padding: 0.8rem;
+}
+.label {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+.left {
+  grid-column: 1 / 4;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.right {
+  grid-column: 4 / 6;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  gap: 0.9rem;
+}
+.list {
+  box-sizing: border-box;
+  align-self: stretch;
+  flex: 1;
+  justify-self: stretch;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.input_box {
+  display: grid;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.input_box label {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.input_box input {
+  min-width: 20rem;
+  height: 2.4rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: 1px solid black;
+  padding: 0 0.8rem;
+}
+select {
+  min-width: 20rem;
+  padding: 0 0.8rem;
+  height: 2.4rem;
+  background-color: white;
+  border: none;
+  outline: 1px solid black;
+  border-radius: 0.3rem;
+}
+button {
+  width: 18rem;
+  height: 2.8rem;
+  border-radius: 0.4rem;
+  border: none;
+  outline: 2px solid #62864c;
+  background-color: #e9ffdb;
+  font-size: 1.4rem;
+  color: #62864c;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #d5fcbc;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: 1.2rem;
+  gap: 1.2rem;
+}

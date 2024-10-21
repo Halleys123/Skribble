@@ -3,15 +3,8 @@
 }
 .tools {
   min-height: 8rem;
-  display: flex;
-  gap: 0.8rem;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
 }
 .tool_group {
-  display: flex;
-  flex-direction: row;
   gap: 1.2rem;
 }
 .tool {
@@ -43,8 +36,6 @@
   height: fit-content;
   column-gap: 0.3rem;
   row-gap: 0.8rem;
-  justify-items: center;
-  align-items: center;
   margin-top: 0.4rem;
 }
 .color {

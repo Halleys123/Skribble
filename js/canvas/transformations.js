@@ -47,9 +47,10 @@ function drawSmoothLine(points, color, brush_size) {
 function zoom(e) {
   e.preventDefault();
   const oldZoom = properties.zoom;
-  properties.zoom = parseFloat(
-    (properties.zoom + e.deltaY * -0.0005).toFixed(2)
-  );
+  const temp = parseFloat((properties.zoom + e.deltaY * -0.0005).toFixed(2));
+  if (temp > 0) {
+    properties.zoom = temp;
+  }
 
   const centerX = canvas.width / 2;
   const centerY = canvas.height / 2;
