@@ -1,5 +1,6 @@
 .canvas_box {
   flex: 1;
+  /* overflow: hidden; */
 }
 .tools {
   min-height: 8rem;

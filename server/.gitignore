@@ -1,0 +1,16 @@
+# gitignore for mongodb, nodejs, expressjs, npm
+node_modules
+npm-debug.log
+
+*.log
+*.bak
+*.swp
+*.tmp
+*.pid
+*.seed
+
+secrets.json
+secrets.js
+secrets.yml
+secrets.yaml
+secrets.env

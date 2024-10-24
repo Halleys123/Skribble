@@ -29,6 +29,15 @@ html {
   font-size: 62.5%;
   /* Game style font */
 }
+textarea {
+  resize: none;
+  overflow: auto;
+}
+canvas {
+  height: 100%;
+  width: 100%;
+}
+
 .content {
   height: 60rem;
 }

@@ -13,7 +13,8 @@ const aspect_ratio = 4 / 3;
 
 function resizeCanvas() {
   canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientWidth / aspect_ratio;
+  canvas.height = canvas.clientHeight;
+  ctx.scale(1, 1);
   redraw();
 }
 

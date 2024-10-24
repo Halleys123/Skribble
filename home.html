@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="flex items-center justify-center ">
+<body class="flex items-center justify-center">
     <div class="main border-radius-1">
         <div class="left">
             <span class="label">
@@ -41,6 +41,15 @@
                     <option value="Combination">Combination</option>
                 </select>
             </div>
+            <div class="input_box">
+                <label>Connected Players</label>
+                <div class="flex row gap-1 p-y-0-8 wrap">
+                    <div class="player flex col gap-1 items-center">
+                        <img src="" alt="player" class="player_img" />
+                        <span class="player_name">Arnav</span>
+                    </div>
+                </div>
+            </div>
             <div class="buttons">
                 <button>Start</button>
                 <button>Invite Link</button>
@@ -51,6 +60,9 @@
                 Custom Word List
             </span>
             <textarea name="list" id="list" class="list" placeholder="Enter words seperated by ',' each"></textarea>
+            <button class="secondary">
+                Generate Words
+            </button>
         </div>
     </div>
 </body>

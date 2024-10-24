@@ -61,4 +61,5 @@ canvas.addEventListener("wheel", zoom);
 canvas.addEventListener("mouseleave", mouse_up);
 
 window.addEventListener("resize", resizeCanvas);
+canvas.addEventListener("resize", resizeCanvas);
 resizeCanvas();
